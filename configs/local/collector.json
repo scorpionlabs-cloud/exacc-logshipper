@@ -1,0 +1,21 @@
+{
+  "identity": {
+    "organization_id": "org-demo",
+    "site_id": "site-a",
+    "exacc_id": "exacc-01",
+    "vm_cluster_id": "cluster-01",
+    "node_id": "node-01"
+  },
+  "state_dir": "/tmp/exacc-demo/collector-state",
+  "spool_dir": "/tmp/exacc-demo/collector-spool",
+  "batch_max_bytes": 1048576,
+  "spool_max_bytes": 16777216,
+  "sources": [
+    {"id": "db-alert", "path": "/tmp/exacc-demo/alert.log"}
+  ],
+  "redact_patterns": [
+    "(?i)password[=:][^ ]+",
+    "(?i)token[=:][^ ]+"
+  ],
+  "storage": {"backend": "filesystem", "root_dir": "/tmp/exacc-demo/landing"}
+}

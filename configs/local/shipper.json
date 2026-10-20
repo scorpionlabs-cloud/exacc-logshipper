@@ -1,0 +1,8 @@
+{
+  "state_dir": "/tmp/exacc-demo/shipper-state",
+  "poll_seconds": 5,
+  "max_uncompressed_bytes": 16777216,
+  "allowed_organizations": ["org-demo"],
+  "storage": {"backend": "filesystem", "root_dir": "/tmp/exacc-demo/landing"},
+  "receiver": {"url": "http://127.0.0.1:18181/v1/telemetry/events:batch"}
+}

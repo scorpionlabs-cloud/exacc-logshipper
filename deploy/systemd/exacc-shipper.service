@@ -1,0 +1,19 @@
+[Unit]
+Description=ExaCC central telemetry shipper
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=exaccinsight
+Group=exaccinsight
+EnvironmentFile=/etc/exacc-shipper/shipper.env
+ExecStart=/opt/exacc-shipper/bin/exacc-shipper -config /etc/exacc-shipper/shipper.json
+Restart=on-failure
+RestartSec=10
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/exacc-shipper
+
+[Install]
+WantedBy=multi-user.target

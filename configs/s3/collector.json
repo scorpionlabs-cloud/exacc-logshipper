@@ -1,0 +1,27 @@
+{
+  "identity": {
+    "organization_id": "org-example",
+    "site_id": "site-a",
+    "exacc_id": "exacc-01",
+    "vm_cluster_id": "cluster-01",
+    "node_id": "node-01"
+  },
+  "state_dir": "/var/lib/exacc-insight/state",
+  "spool_dir": "/var/lib/exacc-insight/spool",
+  "batch_max_bytes": 8388608,
+  "spool_max_bytes": 4294967296,
+  "sources": [
+    {"id": "db-alert", "path": "/approved/adr/home/trace/alert_example.log"}
+  ],
+  "redact_patterns": [
+    "(?i)password[=:][^ ]+",
+    "(?i)token[=:][^ ]+"
+  ],
+  "storage": {
+    "backend": "s3",
+    "endpoint": "https://s3.internal.example",
+    "bucket": "exacc-telemetry",
+    "region": "us-east-1",
+    "ca_cert_file": "/etc/exacc-insight/trust/ca.pem"
+  }
+}

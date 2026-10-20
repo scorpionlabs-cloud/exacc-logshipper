@@ -1,0 +1,17 @@
+{
+  "state_dir": "/var/lib/exacc-shipper/state",
+  "poll_seconds": 30,
+  "max_uncompressed_bytes": 67108864,
+  "allowed_organizations": ["org-example"],
+  "storage": {
+    "backend": "s3",
+    "endpoint": "https://s3.internal.example",
+    "bucket": "exacc-telemetry",
+    "region": "us-east-1",
+    "ca_cert_file": "/etc/exacc-shipper/trust/ca.pem"
+  },
+  "receiver": {
+    "url": "https://rca.internal.example/v1/telemetry/events:batch",
+    "ca_cert_file": "/etc/exacc-shipper/trust/ca.pem"
+  }
+}

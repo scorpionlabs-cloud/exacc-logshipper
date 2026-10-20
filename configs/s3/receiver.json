@@ -1,0 +1,6 @@
+{
+  "listen": ":8443",
+  "data_dir": "/var/lib/exacc-receiver/data",
+  "tls_cert_file": "/etc/exacc-receiver/tls/server.crt",
+  "tls_key_file": "/etc/exacc-receiver/tls/server.key"
+}

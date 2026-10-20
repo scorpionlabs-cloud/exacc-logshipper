@@ -1,0 +1,10 @@
+[Unit]
+Description=Collect ExaCC diagnostic logs every minute
+
+[Timer]
+OnCalendar=*-*-* *:*:00
+Persistent=true
+Unit=exacc-collect.service
+
+[Install]
+WantedBy=timers.target

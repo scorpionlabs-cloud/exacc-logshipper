@@ -1,0 +1,17 @@
+[Unit]
+Description=ExaCC Incremental Diagnostic Log Collector (read-only)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=exaccinsight
+Group=exaccinsight
+EnvironmentFile=/etc/exacc-insight/collector.env
+ExecStart=/opt/exacc-insight/bin/exacc-collect -config /etc/exacc-insight/collector.json
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/exacc-insight
+# Required Oracle diagnostic file paths need explicit read-only sandbox allowances.
+# Adjust sandbox rules to your approved deployment paths before enabling.

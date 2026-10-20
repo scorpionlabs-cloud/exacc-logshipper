@@ -1,0 +1,18 @@
+[Unit]
+Description=ExaCC demonstration durable receiver (not RCA engine)
+After=network-online.target
+
+[Service]
+Type=simple
+User=exaccinsight
+Group=exaccinsight
+EnvironmentFile=/etc/exacc-receiver/receiver.env
+ExecStart=/opt/exacc-receiver/bin/exacc-receiver -config /etc/exacc-receiver/receiver.json
+Restart=on-failure
+RestartSec=10
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/exacc-receiver
+
+[Install]
+WantedBy=multi-user.target
