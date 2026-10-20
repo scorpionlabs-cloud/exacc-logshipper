@@ -91,7 +91,6 @@ configs/              Executable JSON examples for local and S3 profiles
 deploy/systemd/       Template units and collector timer
 scripts/              Test and build helpers
 docs/                 Design, deployment, security, operations, tests, gaps
-  ExaCC_Log_Shipping_Technical_Design_v2.0.docx
 ```
 
 ## Design limitations
