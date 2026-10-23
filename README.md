@@ -1,4 +1,4 @@
-# ExaCC Log Shipping & RCA Ingestion — Source Handover
+# ExaCC Log Shipping & RCA Ingestion
 
 **Release:** v0.1.0 reference implementation · **Date:** 19 October 2026  
 **Scope:** General-purpose, customer-neutral Exadata Cloud@Customer (ExaCC) **log transport** pipeline.  
