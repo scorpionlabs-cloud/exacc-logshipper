@@ -28,8 +28,6 @@ Three Go commands are **implemented**:
 
 Available landing-zone implementations: **filesystem (tested)**, **minimal S3 Signature V4 path-style client (implemented; no SeaweedFS S3 integration test performed)**.
 
-**Important:** The attached Word architecture design describes the intended enterprise end-state (e.g. PostgreSQL checkpoints, SQL/ASM/Data Guard collectors, HA, richer receiver authorization). Those capabilities are *not* supplied by this v0.1.0 prototype. The executable code uses **JSON** configurations, not the future-state YAML examples in the DOCX. See `docs/IMPLEMENTATION_MATRIX.md`.
-
 ## Quick verification — no ExaCC or OCI access required
 
 Requirements: Go 1.22+, Python 3, curl; supported lab environment Linux. Internet access is **not required** to build, as this module depends only on the Go standard library.
